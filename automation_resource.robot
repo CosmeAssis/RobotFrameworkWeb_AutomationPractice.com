@@ -43,6 +43,7 @@ Quando entrar com as informações de cadastro
     Input Text                       locator=//input[@type='text'][contains(@id,'create')]    text=${EMAIL_FAKE}
     Click Button                     locator=//button[@class='btn btn-default button button-medium exclusive'][contains(.,'Create an account')]
     Wait Until Element Is Visible    locator=//h1[@class='page-heading'][contains(.,'Create an account')]
+    Select Radio Button              id_gender    1
     Input Text                       locator=//input[@name='customer_firstname']    text=${FIRST_NAME_FAKE}
     Input Text                       locator=//input[contains(@name,'customer_lastname')]    text=${LAST_NAME_FAKE}
     Input Text                       locator=//input[contains(@type,'password')]    text=${PASSWORD_FAKE}
@@ -59,7 +60,7 @@ Quando entrar com as informações de cadastro
     Select From List By Value	     id=id_state    ${ran int}
     Input Text                       locator=//input[contains(@class,'form-control uniform-input text')]    text=${POSTAL_CODE}
     Input Text                       locator=//input[@type='text'][contains(@id,'mobile')]    text=${CELULAR}
-    Input Text                       locator=//input[contains(@name,'alias')]    text=${ENDERECO_FAKE}
+    Click Element                    locator=//span[contains(.,'Register')]
     
     #Input Text                       locator=//select[contains(@name,'months')]     text=${MES_NASCIMENTO_FAKE}
     Capture Page Screenshot
