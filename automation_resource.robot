@@ -2,6 +2,7 @@
 Library           SeleniumLibrary
 Library           FakerLibrary
 Library           OperatingSystem
+Library           String
 
 *** Variables ***
 ${brownser}    firefox
@@ -35,6 +36,8 @@ Quando entrar com as informações de cadastro
     ${ANO_NASCIMENTO_FAKE}           FakerLibrary.Year
     ${ENDERECO_FAKE}                 FakerLibrary.Address
     ${CIDADE_FAKE}                   FakerLibrary.City
+    ${ran int}=                      Evaluate    random.randint(1, 50)    random
+    ${ran int}=                      Convert To Integer    ${ran int}             
     Input Text                       locator=//input[@type='text'][contains(@id,'create')]    text=${EMAIL_FAKE}
     Click Button                     locator=//button[@class='btn btn-default button button-medium exclusive'][contains(.,'Create an account')]
     Wait Until Element Is Visible    locator=//h1[@class='page-heading'][contains(.,'Create an account')]
@@ -51,6 +54,7 @@ Quando entrar com as informações de cadastro
     Input Text                       locator=//input[@name='lastname']          text=${LAST_NAME_FAKE}
     Input Text                       locator=//input[@name='address1']          text=${ENDERECO_FAKE}
     Input Text                       locator=//input[contains(@name,'city')]    text=${CIDADE_FAKE}
+    Select From List By Value	     id=id_state    ${ran int}
     
     #Input Text                       locator=//select[contains(@name,'months')]     text=${MES_NASCIMENTO_FAKE}
     Capture Page Screenshot
