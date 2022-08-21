@@ -1,0 +1,13 @@
+1661107215654	geckodriver	INFO	Listening on 127.0.0.1:62547
+1661107216249	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\cjesusas\\AppData\\Local\\Temp\\rust_mozprofile4yewjC"
+1661107217652	Marionette	INFO	Marionette enabled
+1661107217666	Marionette	INFO	Listening on port 62557
+console.error: Policies.jsm: 
+  OfferToSaveLoginsDefault ignored because OfferToSaveLogins is present.
+Read port: 62557
+1661107218549	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\cjesusas\\AppData\\Local\\Temp\\rust_mozprofile4yewjC\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 769))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 421))
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://automationpractice.com"
+1661107278877	Marionette	INFO	Stopped listening on port 62557

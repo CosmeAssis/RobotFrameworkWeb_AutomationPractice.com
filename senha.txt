@@ -10,3 +10,4 @@
 ['"Email:ellenshepard@example.com - Password:9mI6A%I!(v"']
 ['"Email:parkstristan@example.org - Password:jSqUZVxs+0"']
 ['"Email:whitney27@example.org - Password:*l*PpzRe9^"']
+['"Email:utaylor@example.org - Password:H&6iHKt%$u"']
