@@ -4,3 +4,5 @@
 ['"Email:jason60@example.org - Password:o)T9nyFiuo"']
 ['"Email:todd20@example.net - Password:(2dA5k*llj"']
 ['"Email:christine24@example.org - Password:^4OSXjxgNl"']
+['"Email:lwilson@example.net - Password:3Ek4FcnYQ$"']
+['"Email:blacktimothy@example.org - Password:%4Z_NpOg@y"']

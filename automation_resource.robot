@@ -34,6 +34,7 @@ Quando entrar com as informações de cadastro
     ${PASSWORD_FAKE}                 FakerLibrary.Password
     ${DIA_NASCIMENTO_FAKE}           FakerLibrary.Day Of Month
     ${MES_NASCIMENTO_FAKE}           FakerLibrary.Month
+    ${ANO_NASCIMENTO_FAKE}           FakerLibrary.Year
     Input Text                       locator=//input[@type='text'][contains(@id,'create')]    text=${EMAIL_FAKE}
     Click Button                     locator=//button[@class='btn btn-default button button-medium exclusive'][contains(.,'Create an account')]
     Wait Until Element Is Visible    locator=//h1[@class='page-heading'][contains(.,'Create an account')]
@@ -45,7 +46,9 @@ Quando entrar com as informações de cadastro
     Click Element			         id=months
     Select From List By Index	     id=months  ${MES_NASCIMENTO_FAKE}
     Click Element			         id=years
-    Select From List By Value	     id=years  1991
+    Select From List By Value	     id=years  ${ANO_NASCIMENTO_FAKE}
+    Input Text                       locator=//input[@name='firstname']    text=${FIRST_NAME_FAKE}
+    Input Text                       locator=//input[@name='lastname']    text=${LAST_NAME_FAKE}
     
     #Input Text                       locator=//select[contains(@name,'months')]     text=${MES_NASCIMENTO_FAKE}
     Capture Page Screenshot
