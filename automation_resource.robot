@@ -17,8 +17,6 @@ Fechar o navegador
     Capture Page Screenshot
     Close Browser
 
-*** Keywords ***
-
 ##CN0001-Criação de novo cadastro no site
 Dado que acesso o site automation practice
     Go To    url=${url}
@@ -35,6 +33,8 @@ Quando entrar com as informações de cadastro
     ${DIA_NASCIMENTO_FAKE}           FakerLibrary.Day Of Month
     ${MES_NASCIMENTO_FAKE}           FakerLibrary.Month
     ${ANO_NASCIMENTO_FAKE}           FakerLibrary.Year
+    ${ENDERECO_FAKE}                 FakerLibrary.Address
+    ${CIDADE_FAKE}                   FakerLibrary.City
     Input Text                       locator=//input[@type='text'][contains(@id,'create')]    text=${EMAIL_FAKE}
     Click Button                     locator=//button[@class='btn btn-default button button-medium exclusive'][contains(.,'Create an account')]
     Wait Until Element Is Visible    locator=//h1[@class='page-heading'][contains(.,'Create an account')]
@@ -47,8 +47,10 @@ Quando entrar com as informações de cadastro
     Select From List By Index	     id=months  ${MES_NASCIMENTO_FAKE}
     Click Element			         id=years
     Select From List By Value	     id=years  ${ANO_NASCIMENTO_FAKE}
-    Input Text                       locator=//input[@name='firstname']    text=${FIRST_NAME_FAKE}
-    Input Text                       locator=//input[@name='lastname']    text=${LAST_NAME_FAKE}
+    Input Text                       locator=//input[@name='firstname']         text=${FIRST_NAME_FAKE}
+    Input Text                       locator=//input[@name='lastname']          text=${LAST_NAME_FAKE}
+    Input Text                       locator=//input[@name='address1']          text=${ENDERECO_FAKE}
+    Input Text                       locator=//input[contains(@name,'city')]    text=${CIDADE_FAKE}
     
     #Input Text                       locator=//select[contains(@name,'months')]     text=${MES_NASCIMENTO_FAKE}
     Capture Page Screenshot
