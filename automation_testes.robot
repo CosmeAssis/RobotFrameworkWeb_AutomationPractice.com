@@ -11,4 +11,4 @@ CN0001-Criação de novo cadastro no site
     Dado que acesso o site automation practice
     E o cliente deseja realizar um cadastro
     Quando entrar com as informações de cadastro
-#    Então um novo cadastro é criado
+    Então um novo cadastro é criado

@@ -61,10 +61,9 @@ Quando entrar com as informações de cadastro
     Input Text                       locator=//input[contains(@class,'form-control uniform-input text')]    text=${POSTAL_CODE}
     Input Text                       locator=//input[@type='text'][contains(@id,'mobile')]    text=${CELULAR}
     Click Element                    locator=//span[contains(.,'Register')]
-    
-    #Input Text                       locator=//select[contains(@name,'months')]     text=${MES_NASCIMENTO_FAKE}
     Capture Page Screenshot
     @{CADASTRO_FAKE}                 Create List    "Email:${EMAIL_FAKE} - Password:${PASSWORD_FAKE}"
     Append To File                   ${EXECDIR}/senha.txt    @{CADASTRO_FAKE}\n
     
-#Então um novo cadastro é criado
+Então um novo cadastro é criado
+    Wait Until Page Contains Element    locator=//p[contains(.,'Welcome to your account. Here you can manage all of your personal information and orders.')]    timeout=10s 

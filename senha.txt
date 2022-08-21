@@ -19,3 +19,5 @@
 ['"Email:brownteresa@example.org - Password:R_9Wb1Mj@c"']
 ['"Email:ifernandez@example.org - Password:gzWbJ4il+7"']
 ['"Email:hcoleman@example.org - Password:r(8LGkLdtW"']
+['"Email:randy11@example.com - Password:)469tTscCF"']
+['"Email:jessica25@example.com - Password:_(jNL^qvt5"']
