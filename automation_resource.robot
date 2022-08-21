@@ -32,12 +32,18 @@ Quando entrar com as informações de cadastro
     ${FIRST_NAME_FAKE}               FakerLibrary.First Name
     ${LAST_NAME_FAKE}                FakerLibrary.Last Name
     ${PASSWORD_FAKE}                 FakerLibrary.Password
+    ${DIA_NASCIMENTO_FAKE}           FakerLibrary.Day Of Month
+    ${MES_NASCIMENTO_FAKE}           FakerLibrary.Month Name
     Input Text                       locator=//input[@type='text'][contains(@id,'create')]    text=${EMAIL_FAKE}
     Click Button                     locator=//button[@class='btn btn-default button button-medium exclusive'][contains(.,'Create an account')]
     Wait Until Element Is Visible    locator=//h1[@class='page-heading'][contains(.,'Create an account')]
     Input Text                       locator=//input[@name='customer_firstname']    text=${FIRST_NAME_FAKE}
     Input Text                       locator=//input[contains(@name,'customer_lastname')]    text=${LAST_NAME_FAKE}
     Input Text                       locator=//input[contains(@type,'password')]    text=${PASSWORD_FAKE}
+    Click Element			         id=days
+    Select From List By Index	     id=days  ${DIA_NASCIMENTO_FAKE}
+    
+    #Input Text                       locator=//select[contains(@name,'months')]     text=${MES_NASCIMENTO_FAKE}
     Capture Page Screenshot
     @{CADASTRO_FAKE}                 Create List    "Email:${EMAIL_FAKE} - Password:${PASSWORD_FAKE}"
     Append To File                   ${EXECDIR}/senha.txt    @{CADASTRO_FAKE}\n
