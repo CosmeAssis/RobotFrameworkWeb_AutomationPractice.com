@@ -10,5 +10,5 @@ Testes automatizados Web utilizando o Robot Framework + Selenium.
 
 <p>Dado que acesso o site automation practice <br />
 E o cliente deseja realizar um cadastro<br />
-Quando entrar com as informações de cadastro
-Então um novo cadastro é criado
+Quando entrar com as informações de cadastro<br />
+Então um novo cadastro é criado<br />
