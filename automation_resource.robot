@@ -24,7 +24,7 @@ Dado que acesso o site automation practice
 
 E o cliente deseja realizar um cadastro
     Click Element    locator=${Locator_Sign_In}
-    Wait Until Element Is Visible    locator=//h1[@class='page-heading'][contains(.,'Authentication')]
+    Wait Until Element Is Visible    locator=//h1[@class='page-heading'][contains(.,'Authentication')]    timeout=10s
 
 Quando entrar com as informações de cadastro
     ${EMAIL_FAKE}                    FakerLibrary.Email
@@ -39,7 +39,8 @@ Quando entrar com as informações de cadastro
     ${ran int}                       Evaluate    random.randint(1, 50)    random
     ${ran int}                       Convert To Integer    ${ran int}
     ${POSTAL_CODE}                   FakerLibrary.Postalcode
-    ${CELULAR}                       FakerLibrary.Phone Number
+    ${CELULAR}                       Evaluate   random.randint(11999510000,11999519999)    random
+    ${CELULAR}                       Convert To Integer    ${CELULAR}
     Input Text                       locator=//input[@type='text'][contains(@id,'create')]    text=${EMAIL_FAKE}
     Click Button                     locator=//button[@class='btn btn-default button button-medium exclusive'][contains(.,'Create an account')]
     Wait Until Element Is Visible    locator=//h1[@class='page-heading'][contains(.,'Create an account')]
@@ -62,7 +63,7 @@ Quando entrar com as informações de cadastro
     Input Text                       locator=//input[@type='text'][contains(@id,'mobile')]    text=${CELULAR}
     Click Element                    locator=//span[contains(.,'Register')]
     Capture Page Screenshot
-    @{CADASTRO_FAKE}                 Create List    "Email:${EMAIL_FAKE} - Password:${PASSWORD_FAKE}"
+    @{CADASTRO_FAKE}                 Create List    Email:${EMAIL_FAKE} - Password:${PASSWORD_FAKE}
     Append To File                   ${EXECDIR}/senha.txt    @{CADASTRO_FAKE}\n
     
 Então um novo cadastro é criado
