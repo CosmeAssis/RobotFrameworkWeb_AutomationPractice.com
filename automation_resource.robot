@@ -76,6 +76,8 @@ E clico em Sign In
 Quando preencho o campo email
     Input Text    locator=//input[@id='email']    text=rmunoz@example.com
 
-#E preencho o campo senha
+E preencho o campo senha
+    Input Text    locator=//input[contains(@type,'password')]    text=sE(H1Eb7xD
+
 #E clico no botão Sign In
 #Então sou direcionado para a pagina com titulo My account - My Store
