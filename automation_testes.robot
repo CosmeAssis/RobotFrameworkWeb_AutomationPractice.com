@@ -21,4 +21,4 @@ CN0002-Login com sucesso no Automation Practice
     Quando preencho o campo email
     E preencho o campo senha
     E clico no botão Sign in no login
-    #Então sou direcionado para a pagina com titulo My account - My Store
+    Então sou direcionado para a pagina com titulo My account - My Store

@@ -82,4 +82,5 @@ E preencho o campo senha
 E clico no botão ${SIGN_IN_LOGIN} no login
     Click Button    locator=//button[@type='submit'][contains(.,'${SIGN_IN_LOGIN}')]
 
-#Então sou direcionado para a pagina com titulo My account - My Store
+Então sou direcionado para a pagina com titulo ${MY_ACCOUNT}
+    Title Should Be    title=${MY_ACCOUNT}
