@@ -19,7 +19,7 @@ Então um novo cadastro é criado<br />
 E clico em Sign In<br />
 Quando preencho o campo email<br />
 E preencho o campo senha<br />
-E clico no botão Sign In<br />
+E clico no botão Sign In no login<br />
 Então sou direcionado para a pagina com titulo My account - My Store<br />
 
 **CN0003-Pesquisar roupas femininas com o menor valor**
