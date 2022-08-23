@@ -70,7 +70,7 @@ Então um novo cadastro é criado
     Wait Until Page Contains Element    locator=//p[contains(.,'Welcome to your account. Here you can manage all of your personal information and orders.')]    timeout=10s 
 
 ##CN0002-Login com sucesso no Automation Practice
-E clico em Sign In
+E clico em Sign in
     E o cliente deseja realizar um cadastro
 
 Quando preencho o campo email
@@ -79,5 +79,7 @@ Quando preencho o campo email
 E preencho o campo senha
     Input Text    locator=//input[contains(@type,'password')]    text=sE(H1Eb7xD
 
-#E clico no botão Sign In
+E clico no botão ${SIGN_IN_LOGIN} no login
+    Click Button    locator=//button[@type='submit'][contains(.,'${SIGN_IN_LOGIN}')]
+
 #Então sou direcionado para a pagina com titulo My account - My Store
