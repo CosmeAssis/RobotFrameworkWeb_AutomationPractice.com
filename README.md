@@ -37,5 +37,5 @@ E adicionar o produto Blouse no carrinho<br />
 E realizo os proximos passos da venda com pagamento Pay by bank wire<br />
 Então a mensagem Your order on My Store is complete é exibida após concluir compra<br />
 
-**CN0005-Realizar compra de produto com desconto menor que 10%**<br />
-**CN0006-Realizar compra de produto com desconto maior que 10%**
+**CN0005-Compra de produto com desconto menor que 10%**<br />
+**CN0006-Compra de produto com desconto maior que 10%**
