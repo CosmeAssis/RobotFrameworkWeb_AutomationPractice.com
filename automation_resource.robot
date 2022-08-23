@@ -24,7 +24,7 @@ Dado que acesso o site automation practice
 
 E o cliente deseja realizar um cadastro
     Click Element    locator=${Locator_Sign_In}
-    Wait Until Element Is Visible    locator=//h1[@class='page-heading'][contains(.,'Authentication')]    timeout=10s
+    Wait Until Element Is Visible    locator=//h1[@class='page-heading'][contains(.,'Authentication')]    timeout=20s
 
 Quando entrar com as informações de cadastro
     ${EMAIL_FAKE}                    FakerLibrary.Email
@@ -43,7 +43,7 @@ Quando entrar com as informações de cadastro
     ${CELULAR}                       Convert To Integer    ${CELULAR}
     Input Text                       locator=//input[@type='text'][contains(@id,'create')]    text=${EMAIL_FAKE}
     Click Button                     locator=//button[@class='btn btn-default button button-medium exclusive'][contains(.,'Create an account')]
-    Wait Until Element Is Visible    locator=//h1[@class='page-heading'][contains(.,'Create an account')]
+    Wait Until Element Is Visible    locator=//h1[@class='page-heading'][contains(.,'Create an account')]    timeout=15s
     Select Radio Button              id_gender    1
     Input Text                       locator=//input[@name='customer_firstname']    text=${FIRST_NAME_FAKE}
     Input Text                       locator=//input[contains(@name,'customer_lastname')]    text=${LAST_NAME_FAKE}
