@@ -24,7 +24,7 @@ Então sou direcionado para a pagina com titulo My account - My Store<br />
 
 **CN0003-Pesquisar roupas femininas com o menor valor**
 
-<p>Dado que eu esteja realizando uma compra 
+<p>Dado que eu esteja realizando uma compra<br />
 Quando o cliente pesquisar por menor valor<br />
 Então será exibido apenas peças com o menor valor<br />
 
