@@ -84,3 +84,8 @@ E clico no botão ${SIGN_IN_LOGIN} no login
 
 Então sou direcionado para a pagina com titulo ${MY_ACCOUNT}
     Title Should Be    title=${MY_ACCOUNT}
+
+##CN0003-Pesquisar roupas femininas com o menor valor
+Dado que eu esteja realizando uma compra
+Quando o cliente pesquisar por menor valor
+Então será exibido apenas peças com o menor valor
