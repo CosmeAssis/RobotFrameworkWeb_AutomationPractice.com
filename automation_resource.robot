@@ -112,7 +112,7 @@ E clico na opção Women
 Quando adicionar o produto ${PRODUTO} ao carrinho
     Wait Until Element Is Visible    locator=//img[contains(@title,'${PRODUTO}')]    timeout=5s
     Click Element    locator=//a[@class='product-name'][contains(.,'${PRODUTO}')]
-    Wait Until Element Is Visible    locator=//h1[contains(@itemprop,'name')]
+    Wait Until Element Is Visible    locator=//h1[contains(.,'Faded Short Sleeve T-shirts')]
     Click Element    locator=//span[contains(.,'Add to cart')]
     Wait Until Element Is Visible    locator=//h2[contains(.,'Product successfully added to your shopping cart')]    timeout=10s
     Click Element    locator=//span[contains(@class,'cross')]
@@ -124,8 +124,12 @@ E adicionar o produto ${PRODUTO} no carrinho
     Click Element    locator=//a[@class='product-name'][contains(.,'${PRODUTO}')]
     Wait Until Element Is Visible    locator=//h1[contains(.,'${PRODUTO}')]
     Click Element    locator=//span[contains(.,'Add to cart')]
-    Wait Until Element Is Visible    locator=//h2[contains(.,'Product successfully added to your shopping cart')]    timeout=6s
+    Wait Until Element Is Visible    locator=//h2[contains(.,'Product successfully added to your shopping cart')]    timeout=10s
     Click Element    locator=//span[contains(.,'Proceed to checkout')]
 
 E realizo os proximos passos da venda com pagamento Pay by bank wire
+    Wait Until Element Is Visible    locator=//span[contains(.,'01. Summary')]    timeout=10s
+    Click Element    locator=//a[@class='button btn btn-default standard-checkout button-medium']
+    
+
 Então a mensagem Your order on My Store is complete é exibida após concluir compra
