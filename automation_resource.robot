@@ -94,4 +94,7 @@ Quando o cliente pesquisar por menor valor
     Wait Until Element Is Visible    locator=//span[@class='cat-name'][contains(.,'Women')]
     Select From List By Value    id=selectProductSort    price:asc
 
-#Então será exibido apenas peças com o menor valor
+Então será exibido apenas peças com o menor valor
+    Sleep    2s
+    Execute Javascript    window.scrollTo(0,1100)
+    Sleep    3s
