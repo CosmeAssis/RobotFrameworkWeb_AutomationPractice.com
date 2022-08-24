@@ -27,4 +27,4 @@ CN0003-Pesquisar roupas femininas com o menor valor
     [Tags]    roupafeminina_menorvalor
     Dado que eu esteja realizando uma compra
     Quando o cliente pesquisar por menor valor
-    Então será exibido apenas peças com o menor valor
+    #Então será exibido apenas peças com o menor valor

@@ -92,5 +92,6 @@ Dado que eu esteja realizando uma compra
 Quando o cliente pesquisar por menor valor
     Click Element    locator=////a[contains(@title,'Women')]
     Wait Until Element Is Visible    locator=//span[@class='cat-name'][contains(.,'Women')]
+    Select From List By Value    id=selectProductSort    price:asc
 
-Então será exibido apenas peças com o menor valor
+#Então será exibido apenas peças com o menor valor
