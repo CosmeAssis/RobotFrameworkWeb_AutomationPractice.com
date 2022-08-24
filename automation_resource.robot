@@ -98,3 +98,10 @@ Então será exibido apenas peças com o menor valor
     Sleep    2s
     Execute Javascript    window.scrollTo(0,1100)
     Sleep    3s
+
+##CN0004-Compra com sucesso utilizando forma de pagamento Pay by bank wire
+E clico na opção Women
+Quando adicionar o produto Faded Short Sleeve T-shirts ao carrinho
+E adicionar o produto Blouse no carrinho
+E realizo os proximos passos da venda com pagamento Pay by bank wire
+Então a mensagem Your order on My Store is complete é exibida após concluir compra
