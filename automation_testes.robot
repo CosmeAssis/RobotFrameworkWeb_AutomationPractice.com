@@ -22,3 +22,9 @@ CN0002-Login com sucesso no Automation Practice
     E preencho o campo senha
     E clico no botão Sign in no login
     Então sou direcionado para a pagina com titulo My account - My Store
+
+CN0003-Pesquisar roupas femininas com o menor valor
+    [Tags]    roupafeminina_menorvalor
+    Dado que eu esteja realizando uma compra
+    Quando o cliente pesquisar por menor valor
+    Então será exibido apenas peças com o menor valor

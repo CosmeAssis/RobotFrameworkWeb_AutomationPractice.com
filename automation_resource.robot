@@ -84,3 +84,17 @@ E clico no botão ${SIGN_IN_LOGIN} no login
 
 Então sou direcionado para a pagina com titulo ${MY_ACCOUNT}
     Title Should Be    title=${MY_ACCOUNT}
+
+##CN0003-Pesquisar roupas femininas com o menor valor
+Dado que eu esteja realizando uma compra
+    Dado que acesso o site automation practice
+
+Quando o cliente pesquisar por menor valor
+    Click Element    locator=//a[contains(@title,'Women')]
+    Wait Until Element Is Visible    locator=//span[@class='cat-name'][contains(.,'Women')]
+    Select From List By Value    id=selectProductSort    price:asc
+
+Então será exibido apenas peças com o menor valor
+    Sleep    2s
+    Execute Javascript    window.scrollTo(0,1100)
+    Sleep    3s
