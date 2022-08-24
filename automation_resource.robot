@@ -104,8 +104,17 @@ E realizo login
     Quando preencho o campo email
     E preencho o campo senha
     E clico no botão Sign in no login
+
 E clico na opção Women
+    Click Element    locator=//a[contains(@title,'Women')]
+    Wait Until Element Is Visible    locator=//span[@class='category-name'][contains(.,'Women')]    timeout=10s
+
 Quando adicionar o produto Faded Short Sleeve T-shirts ao carrinho
+    Wait Until Element Is Visible    locator=//img[contains(@title,'Faded Short Sleeve T-shirts')]    timeout=5s
+    Click Element    locator=//a[@class='product-name'][contains(.,'Faded Short Sleeve T-shirts')]
+    Wait Until Element Is Visible    locator=////h1[@itemprop='name'][contains(.,'Faded Short Sleeve T-shirts')]
+    #Wait Until Element Is Visible    locator=//h2[contains(.,'Product successfully added to your shopping cart')]
+
 E adicionar o produto Blouse no carrinho
 E realizo os proximos passos da venda com pagamento Pay by bank wire
 Então a mensagem Your order on My Store is complete é exibida após concluir compra
