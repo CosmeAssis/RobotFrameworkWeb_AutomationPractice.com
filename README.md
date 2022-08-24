@@ -28,7 +28,7 @@ Então sou direcionado para a pagina com titulo My account - My Store<br />
 Quando o cliente pesquisar por menor valor<br />
 Então será exibido apenas peças com o menor valor<br />
 
-**CN0004-Compra com sucesso utilizando forma de Pay by bank wire**
+**CN0004-Compra com sucesso utilizando forma de pagamento Pay by bank wire**
 <p>Dado que acesso o site automation practice <br />
 E clico em Sign In<br />
 E clico na opção Women<br />
