@@ -100,6 +100,10 @@ Então será exibido apenas peças com o menor valor
     Sleep    3s
 
 ##CN0004-Compra com sucesso utilizando forma de pagamento Pay by bank wire
+E realizo login
+    Quando preencho o campo email
+    E preencho o campo senha
+    E clico no botão Sign in no login
 E clico na opção Women
 Quando adicionar o produto Faded Short Sleeve T-shirts ao carrinho
 E adicionar o produto Blouse no carrinho

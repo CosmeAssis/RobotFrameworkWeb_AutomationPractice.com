@@ -30,8 +30,10 @@ CN0003-Pesquisar roupas femininas com o menor valor
     Então será exibido apenas peças com o menor valor
 
 CN0004-Compra com sucesso utilizando forma de pagamento Pay by bank wire
+    [Tags]    compra_paybybank
     Dado que acesso o site automation practice
     E clico em Sign In
+    E realizo login
     E clico na opção Women
     Quando adicionar o produto Faded Short Sleeve T-shirts ao carrinho
     E adicionar o produto Blouse no carrinho
