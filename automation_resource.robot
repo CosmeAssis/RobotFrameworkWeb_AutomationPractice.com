@@ -101,7 +101,7 @@ Então será exibido apenas peças com o menor valor
     Execute Javascript    window.scrollTo(0,1100)
     Sleep    3s
 
-##CN0004-Compra com sucesso utilizando forma de pagamento Pay by bank wire
+##CN0004-Compra com sucesso utilizando forma de pagamento ${FORMA_PAGAMENTO}
 E realizo login
     Quando preencho o campo email
     E preencho o campo senha
@@ -129,15 +129,18 @@ E adicionar o produto ${PRODUTO} no carrinho
     Wait Until Element Is Visible    locator=//h2[contains(.,'Product successfully added to your shopping cart')]    timeout=10s
     Click Element    locator=//span[contains(.,'Proceed to checkout')]
 
-E realizo os proximos passos da venda com pagamento Pay by bank wire
+E realizo os proximos passos da venda com pagamento ${FORMA_PAGAMENTO}
     Wait Until Element Is Visible    locator=//span[contains(.,'01. Summary')]    timeout=10s
     Click Element    locator=//a[@class='button btn btn-default standard-checkout button-medium']
     Wait Until Element Is Visible    locator=//span[contains(.,'03. Address')]    timeout=10s
-    ${OBSERVACAO}    FakerLibrary.Text
-    Input Text    locator=//textarea[contains(@class,'form-control')]    text=${OBSERVACAO}
     Click Element    locator=//button[@type='submit'][contains(.,'Proceed to checkout')]
     Wait Until Element Is Visible    locator=//span[contains(.,'04. Shipping')]    timeout=10s
     Select Checkbox    locator=//input[contains(@type,'checkbox')]
     Click Element    locator=//button[@type='submit'][contains(.,'Proceed to checkout')]
+    Wait Until Element Is Visible    locator=//span[contains(.,'05. Payment')]    timeout=10s
+    Click Element    locator=//a[@class='bankwire'][contains(.,'${FORMA_PAGAMENTO} (order processing will be longer)')]
 
-Então a mensagem Your order on My Store is complete é exibida após concluir compra
+Então a mensagem ${MSG_PAG_SUCESSO} é exibida após concluir compra
+    Wait Until Element Is Visible    locator=//h3[contains(.,'Bank-wire payment.')]    timeout=10s
+    Click Element    locator=//span[contains(.,'I confirm my order')]
+    Wait Until Element Is Visible    locator=//strong[@class='dark'][contains(.,'${MSG_PAG_SUCESSO}.')]    timeout=10s
