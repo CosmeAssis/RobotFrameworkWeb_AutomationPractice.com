@@ -8,6 +8,8 @@ Library           String
 ${brownser}    firefox
 ${url}         http://automationpractice.com/
 ${Locator_Sign_In}     //a[@class='login'][contains(.,'Sign in')]
+${EMAIL_LOGIN}        rmunoz@example.com
+${SENHA_LOGIN}        sE(H1Eb7xD
 
 *** Keywords ***
 Abrir o navegador
@@ -74,10 +76,10 @@ E clico em Sign in
     E o cliente deseja realizar um cadastro
 
 Quando preencho o campo email
-    Input Text    locator=//input[@id='email']    text=rmunoz@example.com
+    Input Text    locator=//input[@id='email']    text=${EMAIL_LOGIN}
 
 E preencho o campo senha
-    Input Text    locator=//input[contains(@type,'password')]    text=sE(H1Eb7xD
+    Input Text    locator=//input[contains(@type,'password')]    text=${SENHA_LOGIN}
 
 E clico no botão ${SIGN_IN_LOGIN} no login
     Click Button    locator=//button[@type='submit'][contains(.,'${SIGN_IN_LOGIN}')]
@@ -133,6 +135,9 @@ E realizo os proximos passos da venda com pagamento Pay by bank wire
     Wait Until Element Is Visible    locator=//span[contains(.,'03. Address')]    timeout=10s
     ${OBSERVACAO}    FakerLibrary.Text
     Input Text    locator=//textarea[contains(@class,'form-control')]    text=${OBSERVACAO}
+    Click Element    locator=//button[@type='submit'][contains(.,'Proceed to checkout')]
+    Wait Until Element Is Visible    locator=//span[contains(.,'04. Shipping')]    timeout=10s
+    Select Checkbox    locator=//input[contains(@type,'checkbox')]
     Click Element    locator=//button[@type='submit'][contains(.,'Proceed to checkout')]
 
 Então a mensagem Your order on My Store is complete é exibida após concluir compra
