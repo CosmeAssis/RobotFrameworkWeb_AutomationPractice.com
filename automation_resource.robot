@@ -122,6 +122,10 @@ E adicionar o produto ${PRODUTO} no carrinho
     Click Element    locator=//a[contains(@title,'Women')]
     Wait Until Element Is Visible    locator=//img[contains(@title,'${PRODUTO}')]    timeout=10s
     Click Element    locator=//a[@class='product-name'][contains(.,'${PRODUTO}')]
+    Wait Until Element Is Visible    locator=//h1[contains(.,'${PRODUTO}')]
+    Click Element    locator=//span[contains(.,'Add to cart')]
+    Wait Until Element Is Visible    locator=//h2[contains(.,'Product successfully added to your shopping cart')]    timeout=6s
+    Click Element    locator=//span[contains(.,'Proceed to checkout')]
 
 E realizo os proximos passos da venda com pagamento Pay by bank wire
 Então a mensagem Your order on My Store is complete é exibida após concluir compra
