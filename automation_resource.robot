@@ -109,12 +109,12 @@ E realizo login
 
 E clico na opção Women
     Click Element    locator=//a[contains(@title,'Women')]
-    Wait Until Element Is Visible    locator=//span[@class='category-name'][contains(.,'Women')]    timeout=10s
+    #Wait Until Element Is Visible    locator=//span[@class='category-name'][contains(.,'Women')]    timeout=10s
 
 Quando adicionar o produto ${PRODUTO} ao carrinho
-    Wait Until Element Is Visible    locator=//img[contains(@title,'${PRODUTO}')]    timeout=5s
+    #Wait Until Element Is Visible    locator=//img[contains(@title,'${PRODUTO}')]    timeout=5s
     Click Element    locator=//a[@class='product-name'][contains(.,'${PRODUTO}')]
-    Wait Until Element Is Visible    locator=//h1[contains(.,'Faded Short Sleeve T-shirts')]
+    Wait Until Element Is Visible    locator=//h1[contains(.,'Faded Short Sleeve T-shirts')]    timeout=10s
     Click Element    locator=//span[contains(.,'Add to cart')]
     Wait Until Element Is Visible    locator=//h2[contains(.,'Product successfully added to your shopping cart')]    timeout=10s
     Click Element    locator=//span[contains(@class,'cross')]
