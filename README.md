@@ -37,5 +37,10 @@ E adicionar o produto Blouse no carrinho<br />
 E realizo os proximos passos da venda com pagamento Pay by bank wire<br />
 Então a mensagem Your order on My Store is complete é exibida após concluir compra<br />
 
-**CN0005-Compra de produto com desconto menor que 10%**<br />
-**CN0006-Compra de produto com desconto maior que 10%**
+**CN0005-Deletar produto do carrinho de compras**
+<p>Dado que acesso o site automation practice <br />
+E adiciono o produto Faded Short Sleeve T-shirts no carrinho<br />
+E adiciono o produto Blouse<br />
+Quando clico no carrinho<br />
+E removo os produtos<br />
+Então mensagem que os produtos foram excluidos é exibida<br />
