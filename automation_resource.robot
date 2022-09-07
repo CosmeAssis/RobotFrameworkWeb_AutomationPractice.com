@@ -66,7 +66,7 @@ Quando entrar com as informações de cadastro
     Click Element                    locator=//span[contains(.,'Register')]
     Capture Page Screenshot
     @{CADASTRO_FAKE}                 Create List    Email:${EMAIL_FAKE} - Password:${PASSWORD_FAKE}
-    Append To File                   ${EXECDIR}/senha.txt    @{CADASTRO_FAKE}\n
+    Append To File                   ${EXECDIR}/myfiles/senha.txt    @{CADASTRO_FAKE}\n
     
 Então um novo cadastro é criado
     Wait Until Page Contains Element    locator=//p[contains(.,'Welcome to your account. Here you can manage all of your personal information and orders.')]    timeout=10s 
