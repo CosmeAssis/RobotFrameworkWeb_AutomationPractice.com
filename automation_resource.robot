@@ -109,7 +109,7 @@ E realizo login
 
 E clico na opção Women
     Click Element    locator=//a[contains(@title,'Women')]
-    #Wait Until Element Is Visible    locator=//span[@class='category-name'][contains(.,'Women')]    timeout=10s
+    Wait Until Element Is Visible    locator=//span[@class='cat-name'][contains(.,'Women')]    timeout=10s
 
 Quando adicionar o produto ${PRODUTO} ao carrinho
     #Wait Until Element Is Visible    locator=//img[contains(@title,'${PRODUTO}')]    timeout=5s
