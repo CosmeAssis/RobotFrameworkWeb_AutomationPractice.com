@@ -33,3 +33,4 @@
 ['Email:rmunoz@example.com - Password:sE(H1Eb7xD']***
 ['Email:kimberly56@example.com - Password:@3gZo']
 ['Email:kirkwilliams@example.com - Password:+KYvjKcp1K']
+['Email:osanchez@example.org - Password:3nrcBCnj*3']
