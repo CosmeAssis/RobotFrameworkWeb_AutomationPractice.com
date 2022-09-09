@@ -22,9 +22,6 @@ Fechar o navegador
     Capture Page Screenshot
     Close Browser
 
-Gerar Celular
-    ${CELULAR}    geradorCelular.Phn
-
 ##CN0001-Criação de novo cadastro no site
 Dado que acesso o site automation practice
     Go To    url=${url}
@@ -46,8 +43,7 @@ Quando entrar com as informações de cadastro
     ${ran int}                       Evaluate    random.randint(1, 50)    random
     ${ran int}                       Convert To Integer    ${ran int}
     ${POSTAL_CODE}                   FakerLibrary.Postalcode
-    ${CELULAR}                       Evaluate   random.randint(11999510000,11999519999)    random
-    ${CELULAR}                       Convert To Integer    ${CELULAR}
+    ${CELULAR}                       geradorCelular.Phn
     Input Text                       locator=//input[@type='text'][contains(@id,'create')]    text=${EMAIL_FAKE}
     Click Button                     locator=//button[@class='btn btn-default button button-medium exclusive'][contains(.,'Create an account')]
     Wait Until Element Is Visible    locator=//h1[@class='page-heading'][contains(.,'Create an account')]    timeout=15s
