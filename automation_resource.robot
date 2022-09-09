@@ -4,6 +4,7 @@ Library           FakerLibrary    locale=en_US
 #https://faker.readthedocs.io/en/master/locales/en_US.html
 Library           OperatingSystem
 Library           String
+Library           Libraries/geradorCelular/geradorCelular.py
 
 *** Variables ***
 ${brownser}    firefox
@@ -20,6 +21,9 @@ Abrir o navegador
 Fechar o navegador
     Capture Page Screenshot
     Close Browser
+
+Gerar Celular
+    ${CELULAR}    geradorCelular.Cell phone number
 
 ##CN0001-Criação de novo cadastro no site
 Dado que acesso o site automation practice

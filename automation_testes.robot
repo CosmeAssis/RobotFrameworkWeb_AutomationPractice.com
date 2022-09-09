@@ -41,4 +41,5 @@ CN0004-Compra com sucesso utilizando forma de pagamento Pay by bank wire
     Então a mensagem Your order on My Store is complete é exibida após concluir compra
 
 Geração Celular
+    [Tags]    gerar_celular
     Gerar Celular
