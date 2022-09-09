@@ -4,6 +4,7 @@ Library           FakerLibrary    locale=en_US
 #https://faker.readthedocs.io/en/master/locales/en_US.html
 Library           OperatingSystem
 Library           String
+Library           ./Libraries/geradorCelular/geradorCelular.py
 
 *** Variables ***
 ${brownser}    firefox
@@ -42,8 +43,7 @@ Quando entrar com as informações de cadastro
     ${ran int}                       Evaluate    random.randint(1, 50)    random
     ${ran int}                       Convert To Integer    ${ran int}
     ${POSTAL_CODE}                   FakerLibrary.Postalcode
-    ${CELULAR}                       Evaluate   random.randint(11999510000,11999519999)    random
-    ${CELULAR}                       Convert To Integer    ${CELULAR}
+    ${CELULAR}                       geradorCelular.Phn
     Input Text                       locator=//input[@type='text'][contains(@id,'create')]    text=${EMAIL_FAKE}
     Click Button                     locator=//button[@class='btn btn-default button button-medium exclusive'][contains(.,'Create an account')]
     Wait Until Element Is Visible    locator=//h1[@class='page-heading'][contains(.,'Create an account')]    timeout=15s
