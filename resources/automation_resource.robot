@@ -22,8 +22,6 @@ Fechar o navegador
     Close Browser
 
 ##CN0001-Criação de novo cadastro no site
-
-
 Quando entrar com as informações de cadastro
     ${EMAIL_FAKE}                    FakerLibrary.Email
     ${FIRST_NAME_FAKE}               FakerLibrary.First Name
@@ -67,9 +65,6 @@ Então um novo cadastro é criado
     Wait Until Page Contains Element    locator=//p[contains(.,'Welcome to your account. Here you can manage all of your personal information and orders.')]    timeout=10s 
 
 ##CN0002-Login com sucesso no Automation Practice
-E clico em Sign in
-    E o cliente deseja realizar um cadastro
-
 Quando preencho o campo email
     Input Text    locator=//input[@id='email']    text=${EMAIL_LOGIN}
 
@@ -83,8 +78,6 @@ Então sou direcionado para a pagina com titulo ${MY_ACCOUNT}
     Title Should Be    title=${MY_ACCOUNT}
 
 ##CN0003-Pesquisar roupas femininas com o menor valor
-Dado que eu esteja realizando uma compra
-    Dado que acesso o site automation practice
 
 Quando o cliente pesquisar por menor valor
     Click Element    locator=//a[contains(@title,'Women')]
