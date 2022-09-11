@@ -4,6 +4,7 @@ Resource    ../resources/automation_resource.robot
 Resource    ../resources/PageObjects/Home.robot
 Resource    ../resources/PageObjects/Authetication.robot
 Resource    ../resources/PageObjects/CreateAccount.robot
+Resource    ../resources/PageObjects/MyAccount.robot
 ##Execução antes de iniciar o teste
 Test Setup       Abrir o navegador
 ##Execução após execução do teste
