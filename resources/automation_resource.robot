@@ -8,7 +8,6 @@ Library           ./Libraries/geradorCelular/geradorCelular.py
 
 *** Variables ***
 ${brownser}    firefox
-${url}         http://automationpractice.com/
 ${EMAIL_LOGIN}        rmunoz@example.com
 ${SENHA_LOGIN}        sE(H1Eb7xD
 

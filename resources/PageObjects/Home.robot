@@ -2,6 +2,7 @@
 Library    SeleniumLibrary
 
 *** Variables ***
+${url}         http://automationpractice.com/
 
 *** Keywords ***
 Dado que acesso o site automation practice

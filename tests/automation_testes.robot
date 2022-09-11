@@ -1,6 +1,7 @@
 *** Settings ***
 Documentation    Testes automatizados Web utilizando o Robot Framework + Selenium.
 Resource    ../resources/automation_resource.robot
+Resource    ../resources/PageObjects/Home.robot
 ##Execução antes de iniciar o teste
 Test Setup       Abrir o navegador
 ##Execução após execução do teste
