@@ -13,6 +13,7 @@ CN0001-Criação de novo cadastro no site
     Dado que acesso o site automation practice
     E o cliente deseja realizar um cadastro
     Quando preencher o campo email
+    E clicar em Create an account
     E entrar com as informações de cadastro
     Então um novo cadastro é criado
 
