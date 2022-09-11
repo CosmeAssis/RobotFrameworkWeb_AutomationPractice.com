@@ -10,6 +10,7 @@ ${AUTH_BTN_CREATE_AN_ACCOUNT}    'Create an account'
 *** Keywords ***
 Quando preencher o campo email
     ${EMAIL_FAKE}                    FakerLibrary.Email
+    Set Global Variable    ${EMAIL_FAKE}
     Input Text                       locator=//input[@type='text'][contains(${AUTH_FIELD_EMAIL})]    text=${EMAIL_FAKE}
 
 E clicar em Create an account
