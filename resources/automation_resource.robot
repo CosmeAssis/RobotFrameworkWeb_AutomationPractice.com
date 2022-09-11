@@ -17,11 +17,6 @@ Fechar o navegador
     Capture Page Screenshot
     Close Browser
 
-##CN0001-Criação de novo cadastro no site
-    
-Então um novo cadastro é criado
-    Wait Until Page Contains Element    locator=//p[contains(.,'Welcome to your account. Here you can manage all of your personal information and orders.')]    timeout=10s 
-
 ##CN0002-Login com sucesso no Automation Practice
 Quando preencho o campo email
     Input Text    locator=//input[@id='email']    text=${EMAIL_LOGIN}

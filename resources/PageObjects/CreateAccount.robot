@@ -14,6 +14,7 @@ E entrar com as informações de cadastro
     ${FIRST_NAME_FAKE}               FakerLibrary.First Name
     ${LAST_NAME_FAKE}                FakerLibrary.Last Name
     ${PASSWORD_FAKE}                 FakerLibrary.Password
+    Set Global Variable              ${PASSWORD_FAKE}
     ${DIA_NASCIMENTO_FAKE}           FakerLibrary.Day Of Month
     ${MES_NASCIMENTO_FAKE}           FakerLibrary.Month
     ${ANO_NASCIMENTO_FAKE}           FakerLibrary.Year
