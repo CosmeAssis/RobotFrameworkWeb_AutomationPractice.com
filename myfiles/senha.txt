@@ -54,3 +54,5 @@
 ['Email:', 'sford@example.com - Password:(y4Y%ej&wJ']
 ['Email:', 'lydia38@example.org - Password:jPJ0TDoc*+']
 ['Email:', 'gregory08@example.com - Password:)624K%WxqR']
+['Email:', 'haleallen@example.com - Password:B72YFeiaq&']
+['Email:', 'linda58@example.net - Password:0Hl718Mj%u']
