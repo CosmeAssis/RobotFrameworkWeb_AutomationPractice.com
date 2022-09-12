@@ -4,7 +4,7 @@ Library           String
 
 
 *** Variables ***
-${brownser}           firefox
+${brownser}           headlesschrome
 ${EMAIL_LOGIN}        rmunoz@example.com
 ${SENHA_LOGIN}        sE(H1Eb7xD
 
