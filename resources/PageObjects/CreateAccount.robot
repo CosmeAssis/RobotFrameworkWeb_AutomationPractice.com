@@ -7,7 +7,9 @@ Library           OperatingSystem
 Resource          Authetication.robot
 
 *** Variables ***
-
+${CREATEACCT_FIELD_FIRSTNAME}   'customer_firstname' 
+${CREATEACCT_FIELD_LASTNAME}    'customer_lastname'
+${CREATEACCT_FIELD_PASSWORD}    'password'  
 
 *** Keywords ***
 E entrar com as informações de cadastro
@@ -18,17 +20,16 @@ E entrar com as informações de cadastro
     ${DIA_NASCIMENTO_FAKE}           FakerLibrary.Day Of Month
     ${MES_NASCIMENTO_FAKE}           FakerLibrary.Month
     ${ANO_NASCIMENTO_FAKE}           FakerLibrary.Year
-    ${ENDERECO_FAKE}                 FakerLibrary.Address
+    ${ENDERECO_FAKE}                 FakerLibrary.Street Name
     ${CIDADE_FAKE}                   FakerLibrary.City
     ${ran int}                       Evaluate    random.randint(1, 50)    random
     ${ran int}                       Convert To Integer    ${ran int}
     ${POSTAL_CODE}                   FakerLibrary.Postalcode
     ${CELULAR}                       geradorCelular.Phn
-    Wait Until Element Is Visible    locator=//h1[@class='page-heading'][contains(.,'Create an account')]    timeout=15s
     Select Radio Button              id_gender    1
-    Input Text                       locator=//input[@name='customer_firstname']    text=${FIRST_NAME_FAKE}
-    Input Text                       locator=//input[contains(@name,'customer_lastname')]    text=${LAST_NAME_FAKE}
-    Input Text                       locator=//input[contains(@type,'password')]    text=${PASSWORD_FAKE}
+    Input Text                       locator=//input[@name=${CREATEACCT_FIELD_FIRSTNAME}]    text=${FIRST_NAME_FAKE}
+    Input Text                       locator=//input[contains(@name,${CREATEACCT_FIELD_LASTNAME})]    text=${LAST_NAME_FAKE}
+    Input Text                       locator=//input[@type=${CREATEACCT_FIELD_PASSWORD}]  text=${PASSWORD_FAKE}
     Click Element			         id=days
     Select From List By Index	     id=days  ${DIA_NASCIMENTO_FAKE}
     Click Element			         id=months

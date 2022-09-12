@@ -15,3 +15,4 @@ Quando preencher o campo email
 
 E clicar em Create an account
     Click Button                     locator=//button[@class='btn btn-default button button-medium exclusive'][contains(.,${AUTH_BTN_CREATE_AN_ACCOUNT})]
+    Wait Until Element Is Visible    locator=//h1[@class='page-heading'][contains(.,'Create an account')]    timeout=15s
