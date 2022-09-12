@@ -14,6 +14,9 @@ ${C_ACCT_FIELD_ADDRESS_FIRSTNAME}    'firstname'
 ${C_ACCT_FIELD_ADDRESS_LASTNAME}     'lastname'
 ${C_ACCT_FILED_ADDRESS}              'address1'
 ${C_ACCT_FILED_ADDRESS_CITY}         'city'
+${C_ACCT_FIELD_ADDRESS_POSTALCODE}   'postcode'
+${C_ACCT_FIELD_ADDRESS_PHONE}        'phone'
+${C_ACCT_BTN_REGISTER}               'Register'
 
 *** Keywords ***
 E entrar com as informações de cadastro
@@ -29,7 +32,7 @@ E entrar com as informações de cadastro
     ${ran int}                       Evaluate    random.randint(1, 50)    random
     ${ran int}                       Convert To Integer    ${ran int}
     ${POSTAL_CODE}                   FakerLibrary.Postalcode
-    ${CELULAR}                       geradorCelular.Phn
+    ${PHONE}                         geradorCelular.Phn
     Select Radio Button              id_gender    1
     Input Text                       locator=//input[@name=${C_ACCT_FIELD_FIRSTNAME}]    text=${FIRST_NAME_FAKE}
     Input Text                       locator=//input[contains(@name,${C_ACCT_FIELD_LASTNAME})]    text=${LAST_NAME_FAKE}
@@ -45,9 +48,9 @@ E entrar com as informações de cadastro
     Input Text                       locator=//input[@name=${C_ACCT_FILED_ADDRESS}]          text=${ENDERECO_FAKE}
     Input Text                       locator=//input[@name=${C_ACCT_FILED_ADDRESS_CITY}]    text=${CIDADE_FAKE}
     Select From List By Value	     id=id_state    ${ran int}
-    Input Text                       locator=//input[contains(@class,'form-control uniform-input text')]    text=${POSTAL_CODE}
-    Input Text                       locator=//input[@type='text'][contains(@id,'mobile')]    text=${CELULAR}
-    Click Element                    locator=//span[contains(.,'Register')]
+    Input Text                       locator=//input[@name=${C_ACCT_FIELD_ADDRESS_POSTALCODE}]    text=${POSTAL_CODE}
+    Input Text                       locator=//input[@name=${C_ACCT_FIELD_ADDRESS_PHONE}]    text=${PHONE}
+    Click Element                    locator=//span[contains(.,${C_ACCT_BTN_REGISTER})]
     Capture Page Screenshot
     @{CADASTRO_FAKE}                 Create List    Email:    ${EMAIL_FAKE} - Password:${PASSWORD_FAKE}
     Append To File                   ${EXECDIR}/myfiles/senha.txt    @{CADASTRO_FAKE}\n
