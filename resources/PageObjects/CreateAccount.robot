@@ -37,12 +37,9 @@ E entrar com as informações de cadastro
     Input Text                       id:${C_ACCT_FIELD_FIRSTNAME}    text=${FIRST_NAME_FAKE}
     Input Text                       id:${C_ACCT_FIELD_LASTNAME}    text=${LAST_NAME_FAKE}
     Input Text                       id:${C_ACCT_FIELD_PASSWORD}  text=${PASSWORD_FAKE}
-    Click Element			         id=days
-    Select From List By Index	     id=days  ${DIA_NASCIMENTO_FAKE}
-    Click Element			         id=months
-    Select From List By Index	     id=months  ${MES_NASCIMENTO_FAKE}
-    Click Element			         id=years
-    Select From List By Value	     id=years  ${ANO_NASCIMENTO_FAKE}
+    Select From List By Index	     id:days  ${DIA_NASCIMENTO_FAKE}
+    Select From List By Index	     id:months  ${MES_NASCIMENTO_FAKE}
+    Select From List By Value	     id:years  ${ANO_NASCIMENTO_FAKE}
     Input Text                       locator=//input[@name=${C_ACCT_FIELD_ADDRESS_FIRSTNAME}]         text=${FIRST_NAME_FAKE}
     Input Text                       locator=//input[@name=${C_ACCT_FIELD_ADDRESS_LASTNAME}]          text=${LAST_NAME_FAKE}
     Input Text                       locator=//input[@name=${C_ACCT_FILED_ADDRESS}]          text=${ENDERECO_FAKE}
