@@ -7,7 +7,7 @@ Library           OperatingSystem
 Resource          Authetication.robot
 
 *** Variables ***
-${C_ACCT_FIELD_FIRSTNAME}            'customer_firstname' 
+${C_ACCT_FIELD_FIRSTNAME}            customer_firstname
 ${C_ACCT_FIELD_LASTNAME}             'customer_lastname'
 ${C_ACCT_FIELD_PASSWORD}             'password'
 ${C_ACCT_FIELD_ADDRESS_FIRSTNAME}    'firstname'
@@ -34,7 +34,7 @@ E entrar com as informações de cadastro
     ${POSTAL_CODE}                   FakerLibrary.Postalcode
     ${PHONE}                         geradorCelular.Phn
     Select Radio Button              id_gender    1
-    Input Text                       id:customer_firstname    text=${FIRST_NAME_FAKE}
+    Input Text                       id:${C_ACCT_FIELD_FIRSTNAME}    text=${FIRST_NAME_FAKE}
     Input Text                       locator=//input[contains(@name,${C_ACCT_FIELD_LASTNAME})]    text=${LAST_NAME_FAKE}
     Input Text                       locator=//input[@type=${C_ACCT_FIELD_PASSWORD}]  text=${PASSWORD_FAKE}
     Click Element			         id=days
