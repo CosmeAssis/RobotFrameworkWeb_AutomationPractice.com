@@ -16,7 +16,7 @@ ${C_ACCT_FILED_ADDRESS}              address1
 ${C_ACCT_FILED_ADDRESS_CITY}         city
 ${C_ACCT_FIELD_ADDRESS_POSTALCODE}   postcode
 ${C_ACCT_FIELD_ADDRESS_PHONE}        phone_mobile
-${C_ACCT_BTN_REGISTER}               Register
+${C_ACCT_BTN_REGISTER}               'Register'
 ${C_ACCT_SLTC_DAYS}                  days
 ${C_ACCT_SLTC_MONTHS}                months
 ${C_ACCT_SLTC_YEARS}                 years
@@ -51,7 +51,7 @@ E entrar com as informações de cadastro
     Select From List By Value	     id:${C_ACCT_SLTC_STATE}    ${ran_int}
     Input Text                       id:${C_ACCT_FIELD_ADDRESS_POSTALCODE}    text=${POSTAL_CODE}
     Input Text                       id:${C_ACCT_FIELD_ADDRESS_PHONE}    text=${PHONE}
-    Click Element                    xpath=//span[contains(.,${C_ACCT_BTN_REGISTER})]
+    Click Element                    locator=//span[contains(.,${C_ACCT_BTN_REGISTER})]
     Capture Page Screenshot
     @{CADASTRO_FAKE}                 Create List    Email:    ${EMAIL_FAKE} - Password:${PASSWORD_FAKE}
     Append To File                   ${EXECDIR}/myfiles/senha.txt    @{CADASTRO_FAKE}\n
