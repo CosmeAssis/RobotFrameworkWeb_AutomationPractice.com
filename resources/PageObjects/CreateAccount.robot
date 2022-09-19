@@ -10,13 +10,16 @@ Resource          Authetication.robot
 ${C_ACCT_FIELD_FIRSTNAME}            customer_firstname
 ${C_ACCT_FIELD_LASTNAME}             customer_lastname
 ${C_ACCT_FIELD_PASSWORD}             passwd
-${C_ACCT_FIELD_ADDRESS_FIRSTNAME}    'firstname'
-${C_ACCT_FIELD_ADDRESS_LASTNAME}     'lastname'
-${C_ACCT_FILED_ADDRESS}              'address1'
-${C_ACCT_FILED_ADDRESS_CITY}         'city'
-${C_ACCT_FIELD_ADDRESS_POSTALCODE}   'postcode'
-${C_ACCT_FIELD_ADDRESS_PHONE}        'phone'
-${C_ACCT_BTN_REGISTER}               'Register'
+${C_ACCT_FIELD_ADDRESS_FIRSTNAME}    firstname
+${C_ACCT_FIELD_ADDRESS_LASTNAME}     lastname
+${C_ACCT_FILED_ADDRESS}              address1
+${C_ACCT_FILED_ADDRESS_CITY}         city
+${C_ACCT_FIELD_ADDRESS_POSTALCODE}   postcode
+${C_ACCT_FIELD_ADDRESS_PHONE}        phone
+${C_ACCT_BTN_REGISTER}               Register
+${C_ACCT_SLTC_DAYS}                  days
+${C_ACCT_SLTC_MONTHS}                months
+${C_ACCT_SLTC_YEARS}                 years
 
 *** Keywords ***
 E entrar com as informações de cadastro
@@ -37,10 +40,10 @@ E entrar com as informações de cadastro
     Input Text                       id:${C_ACCT_FIELD_FIRSTNAME}    text=${FIRST_NAME_FAKE}
     Input Text                       id:${C_ACCT_FIELD_LASTNAME}    text=${LAST_NAME_FAKE}
     Input Text                       id:${C_ACCT_FIELD_PASSWORD}  text=${PASSWORD_FAKE}
-    Select From List By Index	     id:days  ${DIA_NASCIMENTO_FAKE}
-    Select From List By Index	     id:months  ${MES_NASCIMENTO_FAKE}
-    Select From List By Value	     id:years  ${ANO_NASCIMENTO_FAKE}
-    Input Text                       locator=//input[@name=${C_ACCT_FIELD_ADDRESS_FIRSTNAME}]         text=${FIRST_NAME_FAKE}
+    Select From List By Index	     id:${C_ACCT_SLTC_DAYS}  ${DIA_NASCIMENTO_FAKE}
+    Select From List By Index	     id:${C_ACCT_SLTC_MONTHS}  ${MES_NASCIMENTO_FAKE}
+    Select From List By Value	     id:${C_ACCT_SLTC_YEARS}  ${ANO_NASCIMENTO_FAKE}
+    Input Text                       id:${C_ACCT_FIELD_ADDRESS_FIRSTNAME}         text=${FIRST_NAME_FAKE}
     Input Text                       locator=//input[@name=${C_ACCT_FIELD_ADDRESS_LASTNAME}]          text=${LAST_NAME_FAKE}
     Input Text                       locator=//input[@name=${C_ACCT_FILED_ADDRESS}]          text=${ENDERECO_FAKE}
     Input Text                       locator=//input[@name=${C_ACCT_FILED_ADDRESS_CITY}]    text=${CIDADE_FAKE}
