@@ -81,3 +81,5 @@
 ['Email:', 'megan72@example.com - Password:e65OHAdv$u']
 ['Email:', 'curtishall@example.com - Password:1GSByl!V(M']
 ['Email:', 'jennifer51@example.com - Password:!fsw3TKu#8']
+['Email:', 'jcole@example.com - Password:+AbV$Pge5d']
+['Email:', 'johnsonjames@example.org - Password:_3CNA5Eros']
