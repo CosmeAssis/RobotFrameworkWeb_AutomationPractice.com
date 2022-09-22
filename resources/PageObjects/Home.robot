@@ -1,5 +1,5 @@
 *** Settings ***
-Library    SeleniumLibrary
+Resource    ../LibrariesBase/Libraries.robot
 
 *** Variables ***
 ${url}         http://automationpractice.com/
