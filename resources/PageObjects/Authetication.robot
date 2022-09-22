@@ -1,7 +1,5 @@
 *** Settings ***
-Library           SeleniumLibrary
-Library           FakerLibrary    locale=en_US
-#https://faker.readthedocs.io/en/master/locales/en_US.html
+Resource    ../LibrariesBase/Libraries.robot
 
 *** Variables ***
 ${AUTH_FIELD_EMAIL}              id:email_create
