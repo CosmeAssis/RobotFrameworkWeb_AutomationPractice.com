@@ -1,5 +1,5 @@
 *** Settings ***
-Library    SeleniumLibrary
+Resource    ../LibrariesBase/Libraries.robot
 
 *** Variables ***
 ${MYACCT_MSG_CREATE_ACCOUNT}    'Welcome to your account. Here you can manage all of your personal information and orders.'
