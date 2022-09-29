@@ -26,9 +26,10 @@ Então sou direcionado para a pagina com titulo My account - My Store<br />
 
 **CN0003-Pesquisar roupas femininas com o menor valor**
 
-<p>Dado que eu esteja realizando uma compra<br />
-Quando o cliente pesquisar por menor valor<br />
-Então será exibido apenas peças com o menor valor<br />
+<p>Dado que acesso o site automation practice<br />
+E clico na categoria Women<br />
+Quando filtrar para ordenar os preços por ordem decrescente<br />
+Então são exibidas as peças ordenas do menor para o maior valor<br />
 
 **CN0004-Compra com sucesso utilizando forma de pagamento Pay by bank wire**
 <p>Dado que acesso o site automation practice <br />
