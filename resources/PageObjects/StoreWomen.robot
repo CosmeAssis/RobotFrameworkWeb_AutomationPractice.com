@@ -7,10 +7,9 @@ ${SW_SELECT_PRICE_ASC}          id:selectProductSort
 ${SW_PRODUCT_FADED}                  //a[contains(text(),'Faded Short Sleeve T-shirts')]    
 
 *** Keywords ***
-Quando o cliente pesquisar por menor valor
-
+Quando filtrar para ordenar os preços por ordem decrescente
     Wait Until Element Is Visible    ${SW_PRODUCT_CATEGORY_WOMEN}
-
-Então será exibido apenas peças com o menor valor
     Select From List By Value        ${SW_SELECT_PRICE_ASC}    price:asc 
+
+Então são exibidas as peças ordenas do menor para o maior valor
     Wait Until Element Is Visible    ${SW_PRODUCT_FADED}
