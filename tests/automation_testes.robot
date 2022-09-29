@@ -32,9 +32,10 @@ CN0002-Login com sucesso no Automation Practice
 
 CN0003-Pesquisar roupas femininas com o menor valor
     [Tags]    roupafeminina_menorvalor
-    Dado que eu esteja realizando uma compra
-    Quando o cliente pesquisar por menor valor
-    Então será exibido apenas peças com o menor valor
+    Dado que acesso o site automation practice
+    E clico na categoria Women
+    Quando filtrar para ordenar os preços por ordem decrescente
+    Então são exibidas as peças ordenas do menor para o maior valor
 
 CN0004-Compra com sucesso utilizando forma de pagamento Pay by bank wire
     [Tags]    compra_paybybank
