@@ -5,8 +5,6 @@ Library           String
 
 *** Variables ***
 ${brownser}           headlesschrome
-${EMAIL_LOGIN}        rmunoz@example.com
-${SENHA_LOGIN}        sE(H1Eb7xD
 
 *** Keywords ***
 Abrir o navegador
@@ -18,15 +16,6 @@ Fechar o navegador
     Close Browser
 
 ##CN0002-Login com sucesso no Automation Practice
-Quando preencho o campo email
-    Input Text    locator=//input[@id='email']    text=${EMAIL_LOGIN}
-
-E preencho o campo senha
-    Input Text    locator=//input[contains(@type,'password')]    text=${SENHA_LOGIN}
-
-E clico no botão ${SIGN_IN_LOGIN} no login
-    Click Button    locator=//button[@type='submit'][contains(.,'${SIGN_IN_LOGIN}')]
-
 Então sou direcionado para a pagina com titulo ${MY_ACCOUNT}
     Title Should Be    title=${MY_ACCOUNT}
 

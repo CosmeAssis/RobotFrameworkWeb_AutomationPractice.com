@@ -3,7 +3,7 @@ Documentation    Testes automatizados Web utilizando o Robot Framework + Seleniu
 Resource    ../resources/automation_resource.robot
 Resource    ../resources/PageObjects/Home.robot
 Resource    ../resources/PageObjects/Authetication.robot
-Resource    ../resources/PageObjects/CreateAccount.robot
+Resource    ../resources/PageObjects/LoginMyStore.robot
 Resource    ../resources/PageObjects/MyAccount.robot
 Resource    ../resources/PageObjects/StoreWomen.robot
 ##Execução antes de iniciar o teste
