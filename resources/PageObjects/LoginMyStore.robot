@@ -17,8 +17,6 @@ ${LOGIN_SLTC_DAYS}                  id:days
 ${LOGIN_SLTC_MONTHS}                id:months
 ${LOGIN_SLTC_YEARS}                 id:years
 ${LOGIN_SLTC_STATE}                 id:id_state
-${LOGIN_EMAIL}                      rmunoz@example.com
-${LOGIN_SENHA}                      sE(H1Eb7xD
 
 *** Keywords ***
 E entrar com as informações de cadastro
@@ -53,12 +51,3 @@ E entrar com as informações de cadastro
     Capture Page Screenshot
     @{CADASTRO_FAKE}                 Create List    Email:    ${EMAIL_FAKE} - Password:${PASSWORD_FAKE}
     Append To File                   ${EXECDIR}/myfiles/senha.txt    @{CADASTRO_FAKE}\n
-
-Quando preencho o campo email
-    Input Text    locator=//input[@id='email']    text=${LOGIN_EMAIL}
-
-E preencho o campo senha
-    Input Text    locator=//input[contains(@type,'password')]    text=${LOGIN_SENHA}
-
-E clico no botão ${SIGN_IN_LOGIN} no login
-    Click Button    locator=//button[@type='submit'][contains(.,'${SIGN_IN_LOGIN}')]
