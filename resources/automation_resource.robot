@@ -15,14 +15,8 @@ Fechar o navegador
     Capture Page Screenshot
     Close Browser
 
-##CN0002-Login com sucesso no Automation Practice
-Então sou direcionado para a pagina com titulo ${MY_ACCOUNT}
-    Title Should Be    title=${MY_ACCOUNT}
-
 ##CN0004-Compra com sucesso utilizando forma de pagamento ${FORMA_PAGAMENTO}
-E clico na opção Women
-    Click Element    locator=//a[contains(@title,'Women')]
-    Wait Until Element Is Visible    locator=//span[@class='cat-name'][contains(.,'Women')]    timeout=10s
+
 
 Quando adicionar o produto ${PRODUTO} ao carrinho
     #Wait Until Element Is Visible    locator=//img[contains(@title,'${PRODUTO}')]    timeout=5s
