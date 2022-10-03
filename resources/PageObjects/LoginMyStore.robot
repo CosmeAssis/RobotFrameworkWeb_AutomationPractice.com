@@ -3,20 +3,20 @@ Resource          ../LibrariesBase/Libraries.robot
 Resource          Authetication.robot
 
 *** Variables ***
-${C_ACCT_FIELD_FIRSTNAME}            id:customer_firstname
-${C_ACCT_FIELD_LASTNAME}             id:customer_lastname
-${C_ACCT_FIELD_PASSWORD}             id:passwd
-${C_ACCT_FIELD_ADDRESS_FIRSTNAME}    id:firstname
-${C_ACCT_FIELD_ADDRESS_LASTNAME}     id:lastname
-${C_ACCT_FILED_ADDRESS}              id:address1
-${C_ACCT_FILED_ADDRESS_CITY}         id:city
-${C_ACCT_FIELD_ADDRESS_POSTALCODE}   id:postcode
-${C_ACCT_FIELD_ADDRESS_PHONE}        id:phone_mobile
-${C_ACCT_BTN_REGISTER}               id:submitAccount
-${C_ACCT_SLTC_DAYS}                  id:days
-${C_ACCT_SLTC_MONTHS}                id:months
-${C_ACCT_SLTC_YEARS}                 id:years
-${C_ACCT_SLTC_STATE}                 id:id_state
+${LOGIN_FIELD_FIRSTNAME}            id:customer_firstname
+${LOGIN_FIELD_LASTNAME}             id:customer_lastname
+${LOGIN_FIELD_PASSWORD}             id:passwd
+${LOGIN_FIELD_ADDRESS_FIRSTNAME}    id:firstname
+${LOGIN_FIELD_ADDRESS_LASTNAME}     id:lastname
+${LOGIN_FILED_ADDRESS}              id:address1
+${LOGIN_FILED_ADDRESS_CITY}         id:city
+${LOGIN_FIELD_ADDRESS_POSTALCODE}   id:postcode
+${LOGIN_FIELD_ADDRESS_PHONE}        id:phone_mobile
+${LOGIN_BTN_REGISTER}               id:submitAccount
+${LOGIN_SLTC_DAYS}                  id:days
+${LOGIN_SLTC_MONTHS}                id:months
+${LOGIN_SLTC_YEARS}                 id:years
+${LOGIN_SLTC_STATE}                 id:id_state
 
 *** Keywords ***
 E entrar com as informações de cadastro
@@ -34,20 +34,20 @@ E entrar com as informações de cadastro
     ${POSTAL_CODE}                   FakerLibrary.Postalcode
     ${PHONE}                         geradorCelular.Phn
     Select Radio Button              id_gender    1
-    Input Text                       ${C_ACCT_FIELD_FIRSTNAME}    text=${FIRST_NAME_FAKE}
-    Input Text                       ${C_ACCT_FIELD_LASTNAME}    text=${LAST_NAME_FAKE}
-    Input Text                       ${C_ACCT_FIELD_PASSWORD}  text=${PASSWORD_FAKE}
-    Select From List By Index	     ${C_ACCT_SLTC_DAYS}  ${DIA_NASCIMENTO_FAKE}
-    Select From List By Index	     ${C_ACCT_SLTC_MONTHS}  ${MES_NASCIMENTO_FAKE}
-    Select From List By Value	     ${C_ACCT_SLTC_YEARS}  ${ANO_NASCIMENTO_FAKE}
-    Input Text                       ${C_ACCT_FIELD_ADDRESS_FIRSTNAME}         text=${FIRST_NAME_FAKE}
-    Input Text                       ${C_ACCT_FIELD_ADDRESS_LASTNAME}         text=${LAST_NAME_FAKE}
-    Input Text                       ${C_ACCT_FILED_ADDRESS}          text=${ENDERECO_FAKE}
-    Input Text                       ${C_ACCT_FILED_ADDRESS_CITY}    text=${CIDADE_FAKE}
-    Select From List By Value	     ${C_ACCT_SLTC_STATE}    ${ran_int}
-    Input Text                       ${C_ACCT_FIELD_ADDRESS_POSTALCODE}    text=${POSTAL_CODE}
-    Input Text                       ${C_ACCT_FIELD_ADDRESS_PHONE}    text=${PHONE}
-    Click Element                    ${C_ACCT_BTN_REGISTER}
+    Input Text                       ${LOGIN_FIELD_FIRSTNAME}    text=${FIRST_NAME_FAKE}
+    Input Text                       ${LOGIN_FIELD_LASTNAME}    text=${LAST_NAME_FAKE}
+    Input Text                       ${LOGIN_FIELD_PASSWORD}  text=${PASSWORD_FAKE}
+    Select From List By Index	     ${LOGIN_SLTC_DAYS}  ${DIA_NASCIMENTO_FAKE}
+    Select From List By Index	     ${LOGIN_SLTC_MONTHS}  ${MES_NASCIMENTO_FAKE}
+    Select From List By Value	     ${LOGIN_SLTC_YEARS}  ${ANO_NASCIMENTO_FAKE}
+    Input Text                       ${LOGIN_FIELD_ADDRESS_FIRSTNAME}         text=${FIRST_NAME_FAKE}
+    Input Text                       ${LOGIN_FIELD_ADDRESS_LASTNAME}         text=${LAST_NAME_FAKE}
+    Input Text                       ${LOGIN_FILED_ADDRESS}          text=${ENDERECO_FAKE}
+    Input Text                       ${LOGIN_FILED_ADDRESS_CITY}    text=${CIDADE_FAKE}
+    Select From List By Value	     ${LOGIN_SLTC_STATE}    ${ran_int}
+    Input Text                       ${LOGIN_FIELD_ADDRESS_POSTALCODE}    text=${POSTAL_CODE}
+    Input Text                       ${LOGIN_FIELD_ADDRESS_PHONE}    text=${PHONE}
+    Click Element                    ${LOGIN_BTN_REGISTER}
     Capture Page Screenshot
     @{CADASTRO_FAKE}                 Create List    Email:    ${EMAIL_FAKE} - Password:${PASSWORD_FAKE}
     Append To File                   ${EXECDIR}/myfiles/senha.txt    @{CADASTRO_FAKE}\n
