@@ -2,12 +2,12 @@
 Resource    ../LibrariesBase/Libraries.robot
 
 *** Variables ***
-${AUTH_FIELD_EMAIL}              //input[@id='email']
+${AUTH_FIELD_EMAIL}              id:email_create
 ${AUTH_BTN_CREATE_AN_ACCOUNT}    id:SubmitCreate
 ${AUTH_SUBHEADING_YOURADDRESS}   'Create an account'
 ${AUTH_LOGIN_EMAIL}              rmunoz@example.com
 ${AUTH_LOGIN_SENHA}              sE(H1Eb7xD
-${AUTH_FIELD_LOGIN_EMAIL}        name:email
+${AUTH_FIELD_LOGIN_EMAIL}        //input[@id='email']
 ${AUTH_FIELD_LOGIN_SENHA}        id:passwd
 ${AUTH_BTN_SUBMIT_LOGIN}         id:SubmitLogin
 
@@ -22,6 +22,7 @@ E clicar em Create an account
     Wait Until Element Is Visible    xpath://h1[@class='page-heading'][contains(.,${AUTH_SUBHEADING_YOURADDRESS})]    timeout=15s
 
 Quando preencho o campo email no login
+    Wait Until Element Is Visible    locator=//label[@for='email']
     Input Text    ${AUTH_FIELD_LOGIN_EMAIL}      text=${AUTH_LOGIN_EMAIL}
 
 E preencho o campo senha
