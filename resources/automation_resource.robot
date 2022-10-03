@@ -15,27 +15,6 @@ Fechar o navegador
     Capture Page Screenshot
     Close Browser
 
-##CN0004-Compra com sucesso utilizando forma de pagamento ${FORMA_PAGAMENTO}
-
-
-Quando adicionar o produto ${PRODUTO} ao carrinho
-    #Wait Until Element Is Visible    locator=//img[contains(@title,'${PRODUTO}')]    timeout=5s
-    Click Element    locator=//a[@class='product-name'][contains(.,'${PRODUTO}')]
-    Wait Until Element Is Visible    locator=//h1[contains(.,'Faded Short Sleeve T-shirts')]    timeout=10s
-    Click Element    locator=//span[contains(.,'Add to cart')]
-    Wait Until Element Is Visible    locator=//h2[contains(.,'Product successfully added to your shopping cart')]    timeout=10s
-    Click Element    locator=//span[contains(@class,'cross')]
-
-E adicionar o produto ${PRODUTO} no carrinho
-    Click Element    locator=//a[contains(@class,'home')]
-    Click Element    locator=//a[contains(@title,'Women')]
-    Wait Until Element Is Visible    locator=//img[contains(@title,'${PRODUTO}')]    timeout=10s
-    Click Element    locator=//a[@class='product-name'][contains(.,'${PRODUTO}')]
-    Wait Until Element Is Visible    locator=//h1[contains(.,'${PRODUTO}')]
-    Click Element    locator=//span[contains(.,'Add to cart')]
-    Wait Until Element Is Visible    locator=//h2[contains(.,'Product successfully added to your shopping cart')]    timeout=10s
-    Click Element    locator=//span[contains(.,'Proceed to checkout')]
-
 E realizo os proximos passos da venda com pagamento ${FORMA_PAGAMENTO}
     Wait Until Element Is Visible    locator=//span[contains(.,'01. Summary')]    timeout=10s
     Click Element    locator=//a[@class='button btn btn-default standard-checkout button-medium']

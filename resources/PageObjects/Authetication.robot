@@ -2,7 +2,7 @@
 Resource    ../LibrariesBase/Libraries.robot
 
 *** Variables ***
-${AUTH_FIELD_EMAIL}              id:email_create
+${AUTH_FIELD_EMAIL}              //input[@id='email']
 ${AUTH_BTN_CREATE_AN_ACCOUNT}    id:SubmitCreate
 ${AUTH_SUBHEADING_YOURADDRESS}   'Create an account'
 ${AUTH_LOGIN_EMAIL}              rmunoz@example.com
