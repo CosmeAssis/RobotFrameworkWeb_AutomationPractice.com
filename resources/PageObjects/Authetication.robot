@@ -29,3 +29,8 @@ E preencho o campo senha
 
 E clico no botão Sign in no login
     Click Button    ${AUTH_BTN_SUBMIT_LOGIN} 
+
+E realizo login
+    Quando preencho o campo email no login
+    E preencho o campo senha
+    E clico no botão Sign in no login
