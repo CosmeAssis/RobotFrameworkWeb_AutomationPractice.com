@@ -8,6 +8,7 @@ Resource    ../resources/PageObjects/MyAccount.robot
 Resource    ../resources/PageObjects/StoreWomen.robot
 Resource    ../resources/PageObjects/MyAccountMyStore.robot
 Resource    ../resources/PageObjects/OrderMyStore.robot
+Resource    ../resources/PageObjects/OrderConfirmationMyStore.robot
 ##Execução antes de iniciar o teste
 Test Setup       Abrir o navegador
 ##Execução após execução do teste
