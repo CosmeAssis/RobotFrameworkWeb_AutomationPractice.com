@@ -1,14 +1,14 @@
 *** Settings ***
 Documentation    Testes automatizados Web utilizando o Robot Framework + Selenium.
-Resource    ../resources/automation_resource.robot
-Resource    ../resources/PageObjects/Home.robot
-Resource    ../resources/PageObjects/Authetication.robot
-Resource    ../resources/PageObjects/LoginMyStore.robot
-Resource    ../resources/PageObjects/MyAccount.robot
-Resource    ../resources/PageObjects/StoreWomen.robot
-Resource    ../resources/PageObjects/MyAccountMyStore.robot
-Resource    ../resources/PageObjects/OrderMyStore.robot
-Resource    ../resources/PageObjects/OrderConfirmationMyStore.robot
+Resource    ../resources/base.robot
+Resource    ../resources/pages/Home.robot
+Resource    ../resources/pages/Authetication.robot
+Resource    ../resources/pages/LoginMyStore.robot
+Resource    ../resources/pages/MyAccount.robot
+Resource    ../resources/pages/StoreWomen.robot
+Resource    ../resources/pages/MyAccountMyStore.robot
+Resource    ../resources/pages/OrderMyStore.robot
+Resource    ../resources/pages/OrderConfirmationMyStore.robot
 ##Execução antes de iniciar o teste
 Test Setup       Abrir o navegador
 ##Execução após execução do teste
