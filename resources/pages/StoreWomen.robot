@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../LibrariesBase/Libraries.robot
+Resource    ../base.robot
 
 *** Variables ***
 ${SW_PRODUCT_CATEGORY_WOMEN}    //span[@class='cat-name'][contains(.,'Women')]

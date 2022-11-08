@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../LibrariesBase/Libraries.robot
+Resource    ../base.robot
 
 *** Variables ***
 ${OCMYSTORE_BTN_CONFIRM_ORDER}    //span[contains(.,'I confirm my order')]

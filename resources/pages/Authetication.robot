@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../LibrariesBase/Libraries.robot
+Resource    ../base.robot
 
 *** Variables ***
 ${AUTH_FIELD_EMAIL}              id:email_create

@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../LibrariesBase/Libraries.robot
+Resource    ../base.robot
 
 *** Variables ***
 ${url}         http://automationpractice.com/

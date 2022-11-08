@@ -1,12 +1,12 @@
 *** Settings ***
-Resource    ./LibrariesBase/Libraries.robot
+Resource    ../libraries/libraries.robot
 
 *** Variables ***
-${brownser}           headlesschrome
+${brownser}           chrome
 
 *** Keywords ***
 Abrir o navegador
-    Open Browser    browser=${brownser}
+    Open Browser   brownser=${brownser}
     Maximize Browser Window
 
 Fechar o navegador
