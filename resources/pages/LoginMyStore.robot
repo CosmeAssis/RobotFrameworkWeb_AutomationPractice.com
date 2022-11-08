@@ -1,5 +1,5 @@
 *** Settings ***
-Resource          ../LibrariesBase/Libraries.robot
+Resource    ../base.robot
 Resource          Authetication.robot
 
 *** Variables ***

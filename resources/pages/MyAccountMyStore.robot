@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../LibrariesBase/Libraries.robot
+Resource    ../base.robot
 
 *** Variables ***
 ${MYACCT_MYSTORE_SUBMENU_WOMEN}        //a[contains(@title,'Women')]
