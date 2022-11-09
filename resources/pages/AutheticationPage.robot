@@ -1,5 +1,6 @@
 *** Settings ***
 Resource    ../base.robot
+#https://testersdock.com/robot-framework-page-object-model/
 
 *** Variables ***
 ${AUTH_FIELD_EMAIL}              id:email_create
