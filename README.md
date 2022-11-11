@@ -1,4 +1,4 @@
-# Automação
+# Automação Web
 
 Testes automatizados Web utilizando o Robot Framework + Selenium.
 
