@@ -1,0 +1,7 @@
+AuthEmailInput = "id:email_create"
+AuthBtnCreateAccount = "id:SubmitCreate"
+AuthShYourAddress = "xpath://h1[@class='page-heading'][contains(.,${'Create an account'})]"
+AuthLoginEmailInput = "//input[@id='email']"
+AuthLoginPassInput = "id:passwd"
+AuthBtnSubmitLogin = "id:SubmitLogin"
+AuthElementEmail = "//label[@for='email']"
