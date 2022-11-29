@@ -1,6 +1,6 @@
 *** Settings ***
 Resource    ../base.robot
-Resource          Authetication.robot
+Resource    ./AutheticationPage.robot
 
 *** Variables ***
 ${LOGIN_FIELD_FIRSTNAME}            id:customer_firstname
@@ -49,5 +49,3 @@ E entrar com as informações de cadastro
     Input Text                       ${LOGIN_FIELD_ADDRESS_PHONE}    text=${PHONE}
     Click Element                    ${LOGIN_BTN_REGISTER}
     Capture Page Screenshot
-    @{CADASTRO_FAKE}                 Create List    Email:    ${EMAIL_FAKE} - Password:${PASSWORD_FAKE}
-    Append To File                   ${EXECDIR}/myfiles/senha.txt    @{CADASTRO_FAKE}\n

@@ -5,9 +5,9 @@ Variables    ../TestData/TestData.py
 
 *** Keywords ***
 Quando preencher o campo email
-    ${EmailFake}                   FakerLibrary.Email
+    ${EmailFake}                    FakerLibrary.Email
     Set Global Variable             ${EmailFake}
-    Input Text                      ${AuthEmailInput}    ${EMAIL_FAKE}
+    Input Text                      ${AuthEmailInput}    ${EmailFake}
 
 E clicar em Create an account
     Click Button                     ${AuthBtnCreateAccount}

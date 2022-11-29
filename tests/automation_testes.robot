@@ -2,7 +2,7 @@
 Documentation    Testes automatizados Web utilizando o Robot Framework + Selenium.
 Resource    ../resources/base.robot
 Resource    ../resources/pages/Home.robot
-Resource    ../resources/pages/Authetication.robot
+Resource    ../resources/pages/AutheticationPage.robot
 Resource    ../resources/pages/LoginMyStore.robot
 Resource    ../resources/pages/MyAccount.robot
 Resource    ../resources/pages/StoreWomen.robot

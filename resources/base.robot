@@ -2,11 +2,11 @@
 Resource    ../libraries/libraries.robot
 
 *** Variables ***
-${brownser}           chrome
+${browser}           googlechrome
 
 *** Keywords ***
 Abrir o navegador
-    Open Browser   brownser=${brownser}
+    Open Browser    browser=${browser}
     Maximize Browser Window
 
 Fechar o navegador

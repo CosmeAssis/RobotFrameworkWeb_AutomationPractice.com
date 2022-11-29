@@ -1,6 +1,6 @@
 *** Settings ***
 Library           SeleniumLibrary
-Library           FakerLibrary    locale=en_US
+Library           FakerLibrary
 Library           ../libraries/geradorCelular/geradorCelular.py
 Library           OperatingSystem
 Library           String
